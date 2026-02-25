@@ -23,28 +23,33 @@ function App() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup (important)
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <>
-      {/* 🔥 Scroll Progress Bar */}
-      <div
-        className="fixed top-0 left-0 h-1 bg-gradient-to-r from-primary to-secondary z-50 transition-all duration-200"
-        style={{ width: `${scroll}%` }}
-      ></div>
+    <div className="bg-black text-white overflow-x-hidden scroll-smooth">
 
-      {/* 💎 Portfolio Sections */}
+      {/* Scroll Progress Bar */}
+      <div
+        className="fixed top-0 left-0 h-1
+                   bg-gradient-to-r from-primary to-secondary
+                   z-[10000] transition-all duration-200"
+        style={{ width: `${scroll}%` }}
+      />
+
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Gallery />
-      <Contact />
-    </>
+
+      {/* Important: Prevent content hiding behind navbar */}
+      <main className="pt-16 md:pt-20">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Gallery />
+        <Contact />
+      </main>
+
+    </div>
   );
 }
 
