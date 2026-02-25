@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevents horizontal scroll */
+  background: linear-gradient(
+    -45deg,
+    #0B1220,
+    #121A2B,
+    #0B1220,
+    #0F1F3D
+  );
+  background-size: 300% 300%;
+  animation: modernFlow 18s ease infinite;
+  color: #E2E8F0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+@keyframes modernFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
