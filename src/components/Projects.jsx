@@ -13,7 +13,7 @@ const Projects = () => {
         </p>
 
         <div className="mt-6 space-x-4">
-          <a href="#" className="px-4 py-2 bg-primary text-black rounded-lg">
+          <a href="https://github.com/AbhishekKameri" className="px-4 py-2 bg-primary text-black rounded-lg">
             GitHub
           </a>
           <a href="#" className="px-4 py-2 border border-primary rounded-lg">
